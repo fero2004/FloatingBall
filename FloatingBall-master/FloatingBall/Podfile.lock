@@ -1,0 +1,18 @@
+PODS:
+  - Masonry (1.1.0)
+  - pop (1.0.12)
+  - RBBAnimation (0.4.0)
+
+DEPENDENCIES:
+  - Masonry
+  - pop
+  - RBBAnimation
+
+SPEC CHECKSUMS:
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
+  RBBAnimation: 4b2d66f6d993febce63cd564da934985313b9c59
+
+PODFILE CHECKSUM: fe9b4924abd360c5d0b2ccbca7b3f3c296addd0f
+
+COCOAPODS: 1.4.0
