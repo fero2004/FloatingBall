@@ -177,6 +177,9 @@ static NSInteger const PaopaoMaxNum = 10;
 //水滴动画
 - (void)showShuidiAnimation
 {
+    //动画期间不能点击
+    self.userInteractionEnabled = NO;
+    
     self.shuidiImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 150/4, 250/4)];
     self.shuidiImageView.image = [UIImage imageNamed:@"shuidi"];
     self.shuidiImageView.center = CGPointMake(self.frame.size.width/2, self.frame.size.height / 2);
@@ -188,6 +191,8 @@ static NSInteger const PaopaoMaxNum = 10;
     downAnimation.toValue = @(self.shuidiImageView.center.y + 150);
     downAnimation.duration = 0.7f;
     [downAnimation setCompletionBlock:^(POPAnimation *anim, BOOL finished) {
+        self.userInteractionEnabled = YES;
+        
         [self.shuidiImageView removeFromSuperview];
         //动画结束,开始水波纹动画
         [self showWaterRippleAnimation];
